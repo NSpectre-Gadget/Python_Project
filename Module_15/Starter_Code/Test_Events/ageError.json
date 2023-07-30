@@ -1,0 +1,41 @@
+{
+  "messageVersion": "1.0",
+  "invocationSource": "DialogCodeHook",
+  "userId": "John",
+  "sessionAttributes": {},
+  "bot": {
+    "name": "RoboAdvisor",
+    "alias": "$LATEST",
+    "version": "$LATEST"
+  },
+  "outputDialogMode": "Text",
+  "currentIntent": {
+    "name": "recommendPortfolio",
+    "slots": {
+      "firstName": "John",
+      "age": "65",
+      "riskLevel": "Low",
+      "investmentAmount": "5000"
+    },
+    "confirmationStatus": "None"
+  }
+}
+def recommendation(session_attributes, fulfillment_state, message):
+    """
+    Defines a close slot type response.
+    """
+
+    recommendation = {
+        "sessionAttributes": session_attributes,
+        "dialogAction": {
+            "None": "100% bonds(AGG)m 0% equities (SPY)",
+            "Low":"60% bonds(AGG), 40% equities (SPY)",
+            "Medium":"40% bonds (AGG), 60% equities(SPY)",
+            "High":"20% bonds (AGG), 80% equitie(SPY)",
+            "fulfillmentState": fulfillment_state,
+            "message": message,
+        },
+    }
+
+    if investment_amount >=5000:
+      print(f"Amount must be greater than: {investment_amount}")

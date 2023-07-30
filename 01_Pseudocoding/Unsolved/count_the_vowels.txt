@@ -1,0 +1,6 @@
+def count_the_vowels(str):
+  # @TODO: initialize counter variable
+            loop through the character
+            if character is a vowel add
+            increment counter by one
+            return counter

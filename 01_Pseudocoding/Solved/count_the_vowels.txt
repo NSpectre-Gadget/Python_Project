@@ -1,0 +1,6 @@
+def count_the_vowels(str):
+    # initialize a counter variable to 0
+    # loop through each character in the string
+        # if the char matches one of the vowels in uppercase or lowercase
+        # increment counter by one
+    # return the counter
