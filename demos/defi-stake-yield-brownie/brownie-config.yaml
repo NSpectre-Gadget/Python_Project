@@ -6,3 +6,13 @@ compiler:
     remappings:
       - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.2.0"
       - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.2.1"
+networks:
+  development:
+    verify: False
+  ganache:
+    verify: False
+  Sepolia:
+    verify: True
+    weth_token: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    dai_usd_price_feed: "0x14866185B1962B63C3Ea9E03Bc1da838bab34C19"
+    eth_usd_price_feed: "0x694AA1769357215DE4FAC081bf1f309aDC325306"
