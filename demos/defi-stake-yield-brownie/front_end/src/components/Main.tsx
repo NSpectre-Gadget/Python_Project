@@ -9,7 +9,8 @@ import brownieConfig from "../brownie-config.json"
 import dapp from "../dapp.png"
 import eth from "../eth.png"
 import dai from "../dai.png"
-import { YourWallet } from "../YourWallet"
+import { YourWallet } from "./yourWallets"
+import { makeStyles } from "@material-ui/core"
 
 
 export type Token = {
@@ -19,13 +20,22 @@ export type Token = {
 
 }
 
+const useStyles = makeStyles((theme) => ){
+    title: {
+        color: theme.palette.common.white
+        textAlign: "center",
+        padding: theme.spacing(4)
+    }
+}
+
 export const Main = () => {
     // Show token values from the wallet
-    // Get teh address of different tokens
-    // Get teh balance of the users wallet
+    // Get the address of different tokens
+    // Get the balance of the users wallet
 
     // send the brownie-config to our 'src' folder
     // send the build folder.  We are going to open up brownie-config and paste/dump into 'src' folder
+    const classes = useStyles()
     const { chainId, error } = useEthers()
     const networkName = chainId ? helperConfig[chainId] : "dev"
     let stringChainId = String(chainId)
@@ -54,5 +64,9 @@ export const Main = () => {
             name: "DAI",
         }
     ]
-    return (<YourWallet supportedTokens={supportedTokens} />)
+    return (<>
+        <h2 className={classes.title}>Dapp Token App</h2>
+        <YourWallet supportedTokens={supportedTokens} />
+    </>)
+
 }
