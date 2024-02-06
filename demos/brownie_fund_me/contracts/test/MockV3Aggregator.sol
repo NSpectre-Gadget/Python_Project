@@ -1,4 +1,3 @@
-//Where we'll add the code to deploy our own price feed
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 

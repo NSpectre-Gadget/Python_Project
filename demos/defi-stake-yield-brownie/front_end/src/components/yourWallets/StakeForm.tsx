@@ -5,7 +5,7 @@ import { formatUnits } from "@ethersproject/units"
 import { Button, Input, CircularProgress, Snackbar } from "@material-ui/core"
 import Alert from "@material-ui/lab/Alert"
 import { useStakeTokens } from "../hooks"
-import { utils } from "ethers"
+import {utils} from "ethers"
 import { isMining } from "web3/lib/commonjs/eth.exports"
 
 export interface StakeFormProps {

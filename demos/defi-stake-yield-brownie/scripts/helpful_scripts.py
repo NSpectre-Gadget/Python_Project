@@ -1,15 +1,18 @@
+from web3 import Web3
+import time
 from brownie import (
     network,
     accounts,
     config,
+    interface,
     LinkToken,
     MockV3Aggregator,
     MockDAI,
     MockWETH
     Contract,
-    web3,
 )
-import time
+
+INITIAL_PRICE_FEED_VALUE = 20000000000000000000
 
 NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["hardhat", "development", "ganache"]
 LOCAL_BLOCKCHAIN_ENVIRONMENTS = NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS + [
@@ -31,7 +34,7 @@ contract_to_mock = {
 }
 
 DECIMALS = 18
-INITIAL_VALUE = web3.toWei(2000, "ether")
+INITIAL_VALUE = Web3.toWei(2000, "ether")
 BASE_FEE = 100000000000000000  # The premium
 GAS_PRICE_LINK = 1e9  # Some value calculated depending on the Layer 1 cost and Link
 
@@ -102,7 +105,7 @@ def fund_with_link(
     return tx
 
 
-def deploy_mocks(decimals=DECIMALS, initial_value=INITIAL_VALUE):
+def deploy_mocks(decimals=DECIMALS, initial_value=INITIAL_PRICE_FEED_VALUE):
     """
     Use this script if you want to deploy mocks to a testnet
     """

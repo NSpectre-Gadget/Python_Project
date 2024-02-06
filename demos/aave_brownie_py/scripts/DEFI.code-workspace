@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../../OneDrive/Desktop/GitHub_Upload"
+		}
+	],
+	"settings": {
+		"solidity.compileUsingRemoteVersion": "latest",
+		"solidity.defaultCompiler": "localNodeModule",
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
+	}
+}

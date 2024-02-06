@@ -1,1 +1,1 @@
-export { YourWallet } from "./yourwallets"
+export { YourWallet } from "."

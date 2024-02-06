@@ -1,11 +1,35 @@
-import { stringify } from "querystring"
+import { makeStyles } from "@material-ui/core"
+
+const useStyles = makeStyles(theme => ({
+    container: {
+        display: "inline-grid",
+        gridTemplateColums: "auto auto auto",
+        gap: theme.spacing(1),
+        alignItems: "center"
+    }
+    tokenImg: {
+        width: "32px"
+
+    },
+    amount: {
+        fontWeight: 700
+    }
+}))
 
 interface BalanceMsgProps {
     label: string
-    amoutn: Number
+    amount: Number
     tokenImgSrc: string
 }
 
 export const BalanceMsg = ({ label, amount, tokenImgSrc }: BalanceMsgProps) => {
+    const classes = useStyles()
 
+    return (
+        <div className - {classes.container}>
+            <div>{label}</div>
+            <div className={classes.amount}>{amount}</div>
+            <img className={classes.tokenImg} src={tokenImgSrc} alt="token logo"
+        </div>
+    )
 }

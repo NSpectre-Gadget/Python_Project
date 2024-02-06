@@ -1,7 +1,7 @@
-//SPDX License-Identifier: MIT
-pragma solidity ^0.8.0;
+//SPDX-License-Identifier: MIT
+pragma solidity >=0.4.0 <0.9.0;
 
-import "@openzeppelin/contrats/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract MockDAI is ERC20 {
     constructor() public ERC20("Mock DAI", "DAI") {}

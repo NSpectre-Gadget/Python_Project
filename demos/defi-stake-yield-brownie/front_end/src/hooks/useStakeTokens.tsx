@@ -60,5 +60,5 @@ export const useStakeTokens = (tokenAddress: string) => {
         }
     }, [approveAndStakeErc20State, stakeState])
 
-    return { approveAndStake, approveAndStakeErc20State }
+    return { approveAndStake, state }
 }

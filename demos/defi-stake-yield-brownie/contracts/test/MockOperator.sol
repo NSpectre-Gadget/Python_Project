@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.7.0;
 
-import "@chainlink/contracts/src/v0.7/AuthorizedReceiver.sol";
-import "@chainlink/contracts/src/v0.7/LinkTokenReceiver.sol";
-import "@chainlink/contracts/src/v0.7/ConfirmedOwner.sol";
-import "@chainlink/contracts/src/v0.7/interfaces/LinkTokenInterface.sol";
+import "@chainlink/contracts/src/v0.7/vendor/AuthorizedReceiver.sol";
+import "@chainlink/contracts/src/v0.7/vendor/LinkTokenReceiver.sol";
+import "@chainlink/contracts/src/v0.7/vendor/ConfirmedOwner.sol";
+import "@chainlink/contracts/src/v0.6/interfaces/LinkTokenInterface.sol";
 import "@chainlink/contracts/src/v0.7/interfaces/OperatorInterface.sol";
 import "@chainlink/contracts/src/v0.7/interfaces/OwnableInterface.sol";
 import "@chainlink/contracts/src/v0.7/interfaces/WithdrawalInterface.sol";
