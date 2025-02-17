@@ -4,11 +4,8 @@
 
 ***
 
-* Explain the purpose of the analysis.
-This is a report to an optimal trading algorithm to assess the risk/reward characteristics, we backtested algorithms, or evaluated an algorithms performance by using historical stock data.
-* Purpose of the analysis.
-This is a report to determine the optimal trading algorithm to assess the risk/reward characteristics, we backtested algorithms, or evaluated an algorithms performance by using historical stock data.
-
+* Purpose:
+This is an optimal trading algorithm to assess the risk/reward characteristics, we backtested algorithms, or evaluated an algorithms performance by using historical stock data.
 
 
 Dataset Window Variation
